@@ -31,7 +31,7 @@ open class ChartPointsAreaLayer<T: ChartPoint>: ChartPointsLayer<T> {
     }
     
     open override func display(chart: Chart) {        
-        let areaView = ChartAreasView(points: chartPointScreenLocs, frame: chart.bounds, colors: areaColors, animDuration: animDuration, animDelay: animDelay, addContainerPoints: addContainerPoints, pathGenerator: pathGenerator)
+        let areaView = ChartAreasView(points: chartPointScreenLocs, frame: chart.contentView.bounds, colors: areaColors, animDuration: animDuration, animDelay: animDelay, addContainerPoints: addContainerPoints, pathGenerator: pathGenerator)
         areaViews.append(areaView)
         chart.addSubview(areaView)
     }

@@ -132,7 +132,7 @@ open class ChartPointsLineLayer<T: ChartPoint>: ChartPointsLayer<T> {
             let lineView = generateLineView(screenLine, chart: chart)
             lineViews.append(lineView)
             lineView.isUserInteractionEnabled = false
-            chart.addSubviewNoTransform(lineView)
+            chart.addSubview(lineView)
             self.screenLines.append((screenLine, lineView))
         }
     }
